@@ -1,0 +1,9 @@
+.evoImg {
+  max-width: 50%;
+  min-height: 200px;
+  transition: transform 450ms;
+}
+
+.evoImg:hover {
+  transform: scale(1.08);
+}

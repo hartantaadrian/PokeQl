@@ -2,20 +2,26 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./PokemonCard.module.css";
 
-import InfiniteScroll from "react-infinite-scroll-component";
-
 function PokemonCards(props) {
   const { pokemons } = props;
-
+  console.log(pokemons);
   let cmp;
   cmp = (
     <React.Fragment>
-      <Link key={pokemons.id} to={`/details/${pokemons.id}`}>
-        <div className={styles.card}>
-          <img src={pokemons.image} className={styles.pokeimg}></img>
-          <p className={styles.name}>{pokemons.name}</p>
-        </div>
-      </Link>
+      {pokemons.map((pokemon) => {
+        return (
+          <Link key={pokemon.id} to={`/details/${pokemon.id}`}>
+            <div className={styles.card}>
+              <img
+                src={pokemon.image}
+                alt="listPokemon"
+                className={styles.pokeimg}
+              ></img>
+              <p className={styles.name}>{pokemon.name}</p>
+            </div>
+          </Link>
+        );
+      })}
     </React.Fragment>
   );
 

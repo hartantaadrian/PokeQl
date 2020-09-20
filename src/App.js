@@ -3,7 +3,6 @@ import { Route, Switch } from "react-router-dom";
 import ApolloClient from "apollo-boost";
 import { ApolloProvider } from "react-apollo";
 
-import logo from "./logo.svg";
 import "./App.css";
 import NavBar from "./Component/NavBar";
 import PokemonList from "./Container/PokemonList";

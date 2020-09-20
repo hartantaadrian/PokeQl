@@ -8,6 +8,11 @@
   width: 200px;
   max-height: 200px;
   min-height: 200px;
+  transition: transform 450ms;
+}
+
+.pokeimg:hover {
+  transform: scale(1.08);
 }
 
 .name {
@@ -17,4 +22,12 @@
 
 .card {
   text-align: center;
+}
+
+.listContainer {
+  padding: 10em;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 10px;
+  padding-top: 2em;
 }
